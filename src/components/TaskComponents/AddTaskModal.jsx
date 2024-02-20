@@ -11,6 +11,7 @@ const AddTaskModal =({closeModal, allTasks})=>{
     
     const handleSubmit = async (e) =>{
         e.preventDefault();
+        closeModal(false);
         const id = allTasks.length ? Number(allTasks[allTasks.length - 1].id) +1 : 1;
 
         const result = await axios.post(`http://localhost:8000/todo`,{
