@@ -1,0 +1,36 @@
+{
+    "todo":[
+        {
+            "id": 1,
+            "favourite": true,
+            "title": "Lorem ipsum dolor sit.",
+            "description": "amet consectetur adipisicing elit. Porro, beatae! Veritatis nisi quas repellat! Ipsum quaerat nobis voluptates ut inventore",
+            "progress": "Done",
+            "tags": ["HTML", "CSS", "React"]
+        },
+        {
+            "id": 2,
+            "favourite": false,
+            "title": "Bangladesh is Beautiful",
+            "description": "Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways.",
+            "progress": "In progress",
+            "tags": ["dhaka", "news"]
+        },
+        {
+            "id": 3,
+            "favourite": false,
+            "title": "Dhaka",
+            "description": "Dhaka is the capital city of Bangladesh, in southern Asia. Set beside the Buriganga River, ",
+            "progress": "Backlog",
+            "tags": ["Bangladesh", "Weather"]
+        },
+        {
+            "id": 4,
+            "favourite": false,
+            "title": "Rajshahi, Bangladesh",
+            "description": "Rajshahi is a metropolitan city and a major urban, commercial and educational centre of Bangladesh. It is also the administrative seat of the eponymous division and district.",
+            "progress": "Backlog",
+            "tags": ["District", "Padma"]
+        }
+    ]
+}
