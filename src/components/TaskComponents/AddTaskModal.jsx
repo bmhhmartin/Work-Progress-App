@@ -22,7 +22,6 @@ const AddTaskModal =({closeModal, allTasks})=>{
             "tags": [tags]
             
         })
-        console.log(result.data);
     }
 
 
