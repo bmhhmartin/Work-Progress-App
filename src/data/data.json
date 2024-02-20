@@ -1,36 +1,49 @@
 {
-    "todo":[
-        {
-            "id": 1,
-            "favourite": true,
-            "title": "Lorem ipsum dolor sit.",
-            "description": "amet consectetur adipisicing elit. Porro, beatae! Veritatis nisi quas repellat! Ipsum quaerat nobis voluptates ut inventore",
-            "progress": "Done",
-            "tags": ["HTML", "CSS", "React"]
-        },
-        {
-            "id": 2,
-            "favourite": false,
-            "title": "Bangladesh is Beautiful",
-            "description": "Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways.",
-            "progress": "In progress",
-            "tags": ["dhaka", "news"]
-        },
-        {
-            "id": 3,
-            "favourite": false,
-            "title": "Dhaka",
-            "description": "Dhaka is the capital city of Bangladesh, in southern Asia. Set beside the Buriganga River, ",
-            "progress": "Backlog",
-            "tags": ["Bangladesh", "Weather"]
-        },
-        {
-            "id": 4,
-            "favourite": false,
-            "title": "Rajshahi, Bangladesh",
-            "description": "Rajshahi is a metropolitan city and a major urban, commercial and educational centre of Bangladesh. It is also the administrative seat of the eponymous division and district.",
-            "progress": "Backlog",
-            "tags": ["District", "Padma"]
-        }
-    ]
+  "todo": [
+    {
+      "id": 1,
+      "title": "Go to Dhaka",
+      "description": "Go for office work Meeting.",
+      "progress": "Backlog",
+      "tags": [
+        "Office, Meeting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Shopping",
+      "description": "New Phone",
+      "progress": "Backlog",
+      "tags": [
+        "Redmi, Samsung"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Buy Rapid Pass",
+      "description": "For Metro Rail",
+      "progress": "Done",
+      "tags": [
+        "Taka, Visit"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Team Event",
+      "description": "Front end team event",
+      "progress": "Done",
+      "tags": [
+        "Buffet, Enjoy"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Personal Buffet",
+      "description": "Buying some chicket fries from KFC",
+      "progress": "Done",
+      "tags": [
+        "Martin, Tamal, KFC"
+      ]
+    }
+  ]
 }

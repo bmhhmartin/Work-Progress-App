@@ -14,6 +14,7 @@ const TaskBoard =()=>{
     const handleFavourite = () => {
         setFav(!fav);
     }
+    
 
     useEffect(() => {
         const fetchData = async () =>{
@@ -24,17 +25,17 @@ const TaskBoard =()=>{
                 }
             }catch(err){
                 if(err.response){
-                    setError(`Server Error Status: ${err.response.status} Message: ${err.response.message}`)
+                    setError(`Server Error Status: ${err.response.status}, Message: ${err.response.message}`)
                 }
             }
         }
         fetchData();
-    }, []);
+    }, [tasks]);
 
 
     return (
         <section className="mb-20 mt-[150px]" id="tasks">
-            {addShowModal && <AddTaskModal closeModal={()=>{setAddShowModal(false)}}/>}
+            {addShowModal && <AddTaskModal allTasks={tasks} closeModal={()=>{setAddShowModal(false)}}/>}
             <div className="container mx-auto">
                 <TaskSearch></TaskSearch>
                 <div className="rounded-xl border border-[rgba(206,206,206,0.12)] bg-[#1D212B] px-6 py-8 md:px-9 md:py-16">

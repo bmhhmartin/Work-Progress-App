@@ -18,9 +18,9 @@ export default function TaskList({allTasks, Error, onFav}){
                 <tbody>
                     {
                         allTasks.map((item)=>(
-                            <tr key={item.id} className="border-b border-[#2E3443] [&>td]:align-baseline [&>td]:px-4 [&>td]:py-2">
-                                <td><button onClick={onFav}>{item.favourite ? <FaStar color="orange" /> :<FaStar color="lightgreen" />}</button></td>
-                                <td>{item.title}</td>
+                            <tr key={item.id} className="border-b border-[#2E3443] [&>td]:align-baseline [&>td]:px-4 [&>td]:py-4">
+                                <td><button onClick={onFav}>{item.favourite ? <FaStar className="text-sky-500" /> :<FaStar color="gray" />}</button></td>
+                                <td>{item.favourite ? <div className="text-sky-300">{item.title}</div> : <div className="text-white">{item.title}</div> }</td>
                                 <td>
                                     {item.description}
                                 </td>
@@ -47,6 +47,7 @@ export default function TaskList({allTasks, Error, onFav}){
                     }
                 </tbody>
             </table>
+            {Error && <h2 className="text-center text-red-400 font-bold text-lg">{Error}</h2>}
         </div>
     )
 }
