@@ -1,28 +1,39 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import DataContext from "../../context/DataContext";
 
 
-const AddTaskModal =({closeModal, allTasks})=>{
+const AddTaskModal =({closeModal})=>{
+
+    const {works, setWorks, setError} = useContext(DataContext);
+
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [tags, setTags] = useState([]);
     const [progress, setProgress] = useState('');
     
-    const handleSubmit = async (e) =>{
-        e.preventDefault();
+    const handleSubmit = async () =>{
         closeModal(false);
-        const id = allTasks.length ? Number(allTasks[allTasks.length - 1].id) +1 : 1;
+        try{
+            const id = works.length ? Number(works[works.length - 1].id) +1 : 1;
+        
+            const result = await axios.post(`http://localhost:8000/todo`,{
+                "id": id.toString(),
+                "fav": false,
+                "title": title,
+                "description": description,
+                "progress": progress,
+                "tags": [tags]
+            })
 
-        const result = await axios.post(`http://localhost:8000/todo`,{
-            "id": id,
-            "title": title,
-            "description": description,
-            "progress": progress,
-            "tags": [tags]
-            
-        })
+            setWorks([...works, result.data]);
+
+        }catch(err){
+            setError(err)
+        }
     }
+
 
 
 
