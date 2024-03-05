@@ -22,7 +22,7 @@ const EditModal =({closeEditModal, passData})=>{
         const result = await axios.patch(`http://localhost:8000/todo/${editID}`, {
             "title": newTitle,
             "fav": newFav,
-            "descripiton" : newDescription,
+            "description" : newDescription,
             "progress": newProgress,
             "tags": [newTag]
         });
